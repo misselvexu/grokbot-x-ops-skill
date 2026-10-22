@@ -1,0 +1,35 @@
+name: "Feature request / 功能建议"
+description: "Suggest a guardrail, routine, workflow, or platform adaptation. / 建议新的护栏、routine、流程或平台迁移方案。"
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problem / 要解决的问题"
+      description: "What are you trying to do, and what gets in the way? / 你想做什么？遇到了什么阻碍？"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposed solution / 建议方案"
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: "Risk & platform rules / 风险与平台规则"
+      description: "Does this increase automation or touch outward-facing actions? Link the relevant platform rules. / 是否提高自动化程度或涉及对外动作？请附上相关平台规则链接。"
+  - type: textarea
+    id: sources
+    attributes:
+      label: "Sources / 来源"
+      description: "Public links supporting any factual claims. / 支撑事实陈述的公开链接。"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Checklist / 检查清单"
+      options:
+        - label: "This keeps human approval as the default. / 该建议保持人工审批为默认。"
+        - label: "I can help write both English and Chinese versions. / 我可以协助撰写中英两个版本。"

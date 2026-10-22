@@ -1,0 +1,63 @@
+name: "Bug report / 问题报告"
+description: "A step in the skill fails, is unclear, or no longer matches the product. / skill 中某一步执行失败、表述不清或已与产品不符。"
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not include passwords, 2FA codes, API keys, tokens, cookies, or private account data.** Security issues go to [SECURITY.md](https://github.com/misselvexu/grokbot-x-ops-skill/blob/main/SECURITY.md).
+        **请勿填写密码、2FA 验证码、API key、token、Cookie 或私人账号数据。** 安全问题请按 [SECURITY.md](https://github.com/misselvexu/grokbot-x-ops-skill/blob/main/SECURITY.md) 私下报告。
+  - type: dropdown
+    id: section
+    attributes:
+      label: "Affected section / 涉及章节"
+      options:
+        - "0. Rules / 规则"
+        - "1. Setup questions / 设置问题"
+        - "2. X plugin / X 插件"
+        - "3. Bots / 专职 Bot"
+        - "4. Skills / skill"
+        - "5. Routines"
+        - "6. Draft → Approve → Publish / 草稿 → 审批 → 发布"
+        - "7. Cloud-browser posting / 云电脑浏览器发帖"
+        - "8. Wrap-up / 收尾"
+        - "Docs / 文档"
+        - "Translation / 翻译"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: "What happened? / 发生了什么？"
+      description: "Describe the problem and what your bot did. / 描述问题以及 Bot 的实际行为。"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior / 期望行为"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce / 复现步骤"
+      placeholder: |
+        1. Sent the one-click message / 发送一键复刻消息
+        2. Answered question 6 with "B" / 第 6 题回答 B
+        3. ...
+  - type: input
+    id: version
+    attributes:
+      label: "Skill version / skill 版本"
+      placeholder: "1.0.0"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Checklist / 检查清单"
+      options:
+        - label: "I removed all secrets and personal data. / 我已删除所有机密和个人信息。"
+          required: true
+        - label: "I searched existing issues. / 我已搜索过现有 Issue。"
+          required: true
